@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <FHeader :header_name="header_name"/>
+    <Fworld />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Fworld from './components/Fworld.vue'
+import FHeader from './components/FHeader.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Fworld,
+    FHeader
+  },
+  data(){
+    return({
+      header_name: 'என் கண்மணிக்காக 🖤'
+    })
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
